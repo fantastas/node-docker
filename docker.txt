@@ -1,0 +1,12 @@
+ 2052  docker rm  -f docker-notes-1
+ 2053  docker-compose -f docker-compose.dev.yml up --build
+ 2057  docker-compose -f docker-compose.dev.yml run notes npm run test
+ 2058  docker-compose -f docker-compose.dev.yml run notes npm run test
+ 2059  docker build -t node-docker --target test .
+ 2061  docker run -it --rm -p 8000:8000 node-docker
+ 2062  docker ps -a
+ 2063  docker run -it --rm -p 8000:8000 node-docker
+ 2064  docker build -t node-docker --target test .
+ 2065  docker ps -a
+ 2066  docker-compose -f docker-compose.dev.yml run notes npm run test
+ 2067  history | grep docker
